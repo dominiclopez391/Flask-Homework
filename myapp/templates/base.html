@@ -4,6 +4,20 @@
 		
 	</head>
 	<body>
+
+		{% with messages = get_flashed_messages() %} {% if messages %}
+			{% for message in messages %}
+			{{message}}
+			{% endfor%}
+
+		{% endif %}{% endwith %}
+
+		{% if title %}
+			<title>{{title}}</title>
+		{% else %}
+			<title>Home</title>
+		{% endif %}
+
 		{% block content %}{% endblock %}
 	</body>
 </html>

@@ -1,6 +1,6 @@
 from myapp import db
 
-class TopCities(db.Model):
+class TopCitiesDB(db.Model):
     id = db.Column(db.Integer, primary_key=True) #primary key defines database location
     city_name = db.Column(db.String(64), index=True)
     city_rank = db.Column(db.Integer)
